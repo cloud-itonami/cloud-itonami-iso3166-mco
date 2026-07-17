@@ -1,0 +1,14 @@
+;; data/culture-tx.edn — DataScript tx-data derived from src/culture/facts.cljc
+;; `culture.facts/catalog` (ADR-2607171400 addendum 2, Wave 1 country-level).
+;; Same shape across every cloud-itonami-iso3166-* sibling. Do not hand-edit;
+;; regenerate from the catalog.
+
+[
+#:culture{:id "mco.dish.barbajuan", :name "Barbajuan", :country "MCO", :kind :dish, :summary "Fried appetizer of vegetable and cheese fillings mainly found in the eastern French Riviera, western Liguria and Monaco, holding cultural significance in Monaco's national celebrations.", :url "https://en.wikipedia.org/wiki/Barbajuan", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "mco.dish.stocafi", :name "Stocafi", :country "MCO", :kind :dish, :summary "Monégasque entree consisting of a fish (stockfish) casserole, served with white wine, cognac and tomatoes.", :url "https://en.wikipedia.org/wiki/Mon%C3%A9gasque_cuisine", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "mco.dish.socca", :name "Socca", :country "MCO", :kind :dish, :summary "Pancake made using chickpea flour and olive oil, listed among the dishes of Monégasque cuisine.", :url "https://en.wikipedia.org/wiki/Mon%C3%A9gasque_cuisine", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "mco.product.postage-stamps", :name "Postage stamps of Monaco", :country "MCO", :kind :product, :summary "Monaco's postage stamps, tied to French postal rates, remain popular among collectors and are considered a source of revenue for the principality.", :url "https://en.wikipedia.org/wiki/Postage_stamps_and_postal_history_of_Monaco", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:url "https://en.wikipedia.org/wiki/Sainte_D%C3%A9vote", :id "mco.festival.sainte-devote", :kind :festival, :name-local "Sainte Dévote", :country "MCO", :retrieved-at "2026-07-17", :summary "Festival honoring Saint Devota, patron saint of Monaco; on the evening before her feast day a symbolic fishing boat is brought in procession into Port-Hercule and set alight, on 27 January.", :name "Feast of Saint Devota", :url-provenance :wikipedia-en}
+#:culture{:id "mco.heritage.princes-palace", :name "Prince's Palace of Monaco", :country "MCO", :kind :heritage, :summary "Built in 1191 as a Genoese fortress, evolved over seven centuries as the official residence of Monaco's rulers, serving as both a working headquarters and cultural heritage site open to public touring in summer.", :url "https://en.wikipedia.org/wiki/Prince%27s_Palace_of_Monaco", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "mco.heritage.oceanographic-museum", :name "Oceanographic Museum of Monaco", :country "MCO", :kind :heritage, :summary "Museum of marine sciences in Monaco City, part of the Institut océanographique, established in 1910.", :url "https://en.wikipedia.org/wiki/Oceanographic_Museum", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+]
