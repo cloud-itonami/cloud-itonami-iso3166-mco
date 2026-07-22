@@ -1,0 +1,37 @@
+(ns marketentry.facts-test
+  (:require [clojure.test :refer [deftest is testing]]
+            [marketentry.facts :as facts]))
+
+(deftest mco-has-spec-basis
+  (let [sb (facts/spec-basis "MCO")]
+    (is (some? sb))
+    (is (string? (:provenance sb)))
+    (is (seq (:required-evidence sb)))
+    (is (some? (facts/corporate-number-spec-basis "MCO")))
+    (is (some? (facts/rci-clearance-spec-basis "MCO")))))
+
+(deftest mco-rep-spec-basis-is-honestly-absent
+  (testing "Monaco is not an EU member and no Monaco-specific authorized-representative regime was confirmed -- deliberately not claimed"
+    (is (nil? (facts/rep-spec-basis "MCO")))))
+
+(deftest unknown-jurisdiction-has-no-spec-basis
+  (is (nil? (facts/spec-basis "ATL")))
+  (is (nil? (facts/spec-basis "ZZZ"))))
+
+(deftest required-evidence-satisfied
+  (let [sb (facts/spec-basis "MCO")
+        all (:required-evidence sb)]
+    (is (true? (facts/required-evidence-satisfied? "MCO" all)))
+    (is (not (facts/required-evidence-satisfied? "MCO" (take 1 all))))
+    (is (nil? (facts/required-evidence-satisfied? "ATL" all)))))
+
+(deftest coverage-is-honest
+  (let [c (facts/coverage ["MCO" "USA" "ATL"])]
+    (is (= 3 (:requested c)))
+    (is (= 2 (:covered c)))
+    (is (= ["ATL"] (:missing-jurisdictions c)))))
+
+(deftest rci-clearance-spec-basis-present
+  (let [rc (facts/rci-clearance-spec-basis "MCO")]
+    (is (string? (:rci-clearance-legal-basis rc)))
+    (is (string? (:rci-clearance-provenance rc)))))

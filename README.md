@@ -1,9 +1,21 @@
 # cloud-itonami-iso3166-mco
 
-**MCO**: Monaco.
+**`:implemented`** market-entry actor for **MCO** (Monaco).
 
-- public procurement
-- Commercial Registry
+Flagship HARD: `rci-clearance-missing` (RCI declaration-receipt OR
+administrative-authorization, whichever the declared activity
+category requires) · tax HARD: `fiscal-declaration-unverified`
+(Direction des Services Fiscaux / Impôt sur les Bénéfices)
+
+Monaco is NOT an EU member state (verified, not assumed); market
+entry runs through Monaco's own Répertoire du Commerce et de
+l'Industrie (RCI) regime rather than an EU-directive procurement
+portal.
+
+```
+clojure -M:dev:test
+clojure -M:dev:run
+```
 
 AGPL-3.0-or-later.
 
