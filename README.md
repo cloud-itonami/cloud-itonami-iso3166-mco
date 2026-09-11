@@ -13,8 +13,8 @@ l'Industrie (RCI) regime rather than an EU-directive procurement
 portal.
 
 ```
-clojure -M:dev:test
-clojure -M:dev:run
+kbb -M:dev:test
+kbb -M:dev:run
 ```
 
 AGPL-3.0-or-later.
